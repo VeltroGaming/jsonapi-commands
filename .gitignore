@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+
+# Dev stuff #
+bin/*
+deps/*
