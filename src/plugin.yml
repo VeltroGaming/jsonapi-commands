@@ -1,0 +1,9 @@
+name: JSONAPI-Commands
+version: 1.0.0
+description: Register custom ingame /commands for the JSONAPI.
+author: silvinci
+authors: [silvinci, alecgorge, CubixCraft]
+website: https://github.com/CubixCraft/jsonapi-commands
+
+main: com.github.cubixcraft.jsonapi.commands.Main
+depend: [JSONAPI]
