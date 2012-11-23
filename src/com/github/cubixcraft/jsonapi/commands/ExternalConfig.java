@@ -12,7 +12,13 @@ public class ExternalConfig extends YamlConfiguration {
 	private File file;
 
 	public ExternalConfig(File file) throws IOException {
+		super();
 		this.file = file;
+		
+		try {
+			this.load(this.file);
+		} catch (Exception e) { }
+		
 		this.save();
 	}
 	public ExternalConfig(String file) throws IOException {
