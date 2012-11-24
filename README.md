@@ -67,7 +67,7 @@ A sample (prettifyed) response for `/tp silvinci Notch` run by the player alecgo
 
 ## Help
 
-- If you encounter a bug or have feature request, feel free to [open an issue](https://github.com/CubixCraft/jsonapi-commands/issues/new).
+- If you encounter a bug or have a feature request, feel free to [open an issue](https://github.com/CubixCraft/jsonapi-commands/issues/new).
 - If you can't get everything up and running and need a helping hand, you can [post to the forum thread](http://forums.bukkit.org/threads/admn-info-jsonapi-v4-0-1-json-http-and-socket-api-for-controlling-a-server-1-4.14270/).
 
 ## License
