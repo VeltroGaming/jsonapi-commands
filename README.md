@@ -23,7 +23,7 @@ It contains all registered commands and may be edited by hand. This file survive
 This way you're programs don't have to re-register (refer to 'Methods') their commands all the time,
 nevertheless I do encourage you to implement checks into your software. You'll never now what can possibly happen.
 
-## How to work with it
+## How to use it
 
 JSONAPI-Commands introduces new methods and a stream to @alecgorge's *great* [JSONAPI](https://github.com/alecgorge/jsonapi).
 
@@ -64,6 +64,11 @@ A sample (prettifyed) response for `/tp silvinci Notch` run by the player alecgo
 ## Examples
 
 ... will follow shortly.
+
+## Help
+
+- If you encounter a bug or have feature request, feel free to [open an issue](https://github.com/CubixCraft/jsonapi-commands/issues/new).
+- If you can't get everything up and running and need a helping hand, you can [post to the forum thread](http://forums.bukkit.org/threads/admn-info-jsonapi-v4-0-1-json-http-and-socket-api-for-controlling-a-server-1-4.14270/).
 
 ## License
 
