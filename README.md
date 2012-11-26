@@ -1,9 +1,11 @@
-# ![JSONAPI-Commands](http://i.imgur.com/CtpZF.png)
+# [![JSONAPI-Commands](http://i.imgur.com/CtpZF.png)](http://dev.bukkit.org/server-mods/jsonapi-commands/)
 
 **With JSONAPI-Commands you can easily register** ***real***
 **ingame commands like `/spawn` or `/tp silvinci Notch`.**  
 This is it. No downsides. No quirky hacks. It just works.
 You don't even get these pesky `Unknown command` messages.
+
+View the [BukkitDev page](http://dev.bukkit.org/server-mods/jsonapi-commands/).
 
 ## Installation
 
