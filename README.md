@@ -9,7 +9,7 @@ View the [BukkitDev page](http://dev.bukkit.org/server-mods/jsonapi-commands/).
 
 ## Installation
 
-Download the [latest version](https://dl.dropbox.com/s/vfn0pimnk6clkpw/JSONAPI-Commands.jar?dl=1)
+Download the [latest version](https://dl.dropbox.com/s/0pt7rk39y3qgmxt/JSONAPI-Commands.jar?dl=1)
 of JSONAPI-Commands and put it in your server's `plugins` directory.
 If you haven't already grab the [latest version](http://ci.alecgorge.com/job/JSONAPI/lastSuccessfulBuild/artifact/target/JSONAPI.jar)
 of JSONAPI and put in the very same directory.
