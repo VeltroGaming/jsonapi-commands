@@ -31,12 +31,12 @@ JSONAPI-Commands introduces new methods and a stream to @alecgorge's *great* [JS
 
 ### Methods
 
-- `addListener(String command)` registers the given command
-- `addListeners(String[] command)` registers the given commands
-- `removeListener(String command)` removes the given command
-- `removeListeners(String[] command)` removes the given commands
-- `removeAllListeners()` removes all listeners *(use with caution!)*
-- `allListeners()` returns an array of all registered commands
+- `commands.addListener(String command)` registers the given command
+- `commands.addListeners(String[] command)` registers the given commands
+- `commands.removeListener(String command)` removes the given command
+- `commands.removeListeners(String[] command)` removes the given commands
+- `commands.removeAllListeners()` removes all listeners *(use with caution!)*
+- `commands.allListeners()` returns an array of all registered commands
 
 ### Stream
 
