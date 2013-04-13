@@ -60,6 +60,6 @@ public class APIMethods implements JSONAPIMethodProvider {
 		returnDescription="Returns an array of strings of all commands the API is listening on."
 	)
 	public String[] allListeners() {
-		return (String[]) this.plugin.getListeners().toArray();
+		return this.plugin.getListeners().toArray(new String[0]);
 	}
 }
