@@ -1,5 +1,5 @@
 name: JSONAPI-Commands
-version: 1.0.0
+version: 1.0.1
 description: Register custom ingame /commands for the JSONAPI.
 author: silvinci
 authors: [silvinci, alecgorge, CubixCraft]
