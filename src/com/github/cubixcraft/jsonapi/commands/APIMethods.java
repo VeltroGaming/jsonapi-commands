@@ -18,11 +18,29 @@ public class APIMethods implements JSONAPIMethodProvider {
 	
 	@API_Method(
 		namespace="commands",
+		returnDescription="Returns true after it has bound the generic command listener."
+	)
+	public boolean addPassiveGenericListener() {
+		this.plugin.addPassiveListener();
+		return true;
+	}
+	
+	@API_Method(
+		namespace="commands",
 		argumentDescriptions={"The command the API should stop listening on"},
 		returnDescription="Returns true if no more events of this command will be sent, false if not."
 	)
 	public boolean removeListener(String command) {
 		this.plugin.removeListener(command);
+		return true;
+	}
+	
+	@API_Method(
+		namespace="commands",
+		returnDescription="Returns true after it has unbound the generic command listener."
+	)
+	public boolean removePassiveGenericListener() {
+		this.plugin.removePassiveListener();
 		return true;
 	}
 	

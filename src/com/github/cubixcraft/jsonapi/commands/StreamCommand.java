@@ -9,11 +9,13 @@ public class StreamCommand extends JSONAPIStreamMessage {
 	private String command;
 	private String[] args;
 	private Player player;
+	private Boolean passive;
 	
-	public StreamCommand(String command, String[] args, Player player) {
+	public StreamCommand(String command, String[] args, Player player, Boolean passive) {
 		this.command = command;
 		this.args = args;
 		this.player = player;
+		this.passive = passive;
 	}
 	
 	@Override
@@ -28,6 +30,7 @@ public class StreamCommand extends JSONAPIStreamMessage {
 		o.put("command", this.command);
 		o.put("args", this.args);
 		o.put("player", this.player);
+		o.put("passive", this.passive);
 		return o;
 	}
 }

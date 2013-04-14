@@ -16,9 +16,11 @@ public class CommandListener implements Listener {
 		String[] command = event.getMessage().substring(1).split(" ");
 		String label = command[0].toLowerCase();
 		
-		if (this.plugin.getListeners().contains(label)) {
+		if (this.plugin.getPassiveListener() || this.plugin.getListeners().contains(label)) {
 			event.setCancelled(true);
-			this.plugin.emit(label, Arrays.copyOfRange(command, 1, command.length), player, event);
+			this.plugin.emit(label, Arrays.copyOfRange(command, 1, command.length), player, event, false);
+		} else if (this.plugin.getPassiveListener()) {
+			this.plugin.emit(label, Arrays.copyOfRange(command, 1, command.length), player, event, true);
 		}
 	}
 }

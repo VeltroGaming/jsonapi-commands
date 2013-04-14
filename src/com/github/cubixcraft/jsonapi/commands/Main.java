@@ -25,6 +25,7 @@ public class Main extends JavaPlugin {
 	private PluginManager pm;
 	private ExternalConfig config;
 	private Set<String> listeners = new HashSet<String>();
+	private boolean passiveListener = false;
 	
 	@Override
 	public void onEnable() {
@@ -64,6 +65,7 @@ public class Main extends JavaPlugin {
 			return;
 		}
 		this.config.addDefault("commands", new String[] {"someCommand"});
+		this.config.addDefault("genericListener", false);
 		this.config.options().copyDefaults(true);
 		this.config.save();
 		this.config.reload();
@@ -71,15 +73,20 @@ public class Main extends JavaPlugin {
 		// Register commands from config
 		Main.log.info("[JSONAPI-Commands] Registering commands");
 		for (String command : this.config.getStringList("commands")) this.addListener(command);
+		if (this.config.getBoolean("passiveListener", false)) this.addPassiveListener();
 		
 		Main.log.info("[JSONAPI-Commands] Ready for take-off");
 	}
 	@Override
 	public void onDisable() {}
-	
+
 	public void addListener(String command) {
 		Main.log.info("[JSONAPI-Commands] Add command: " + command);
 		this.listeners.add(command.toLowerCase());
+	}
+	public void addPassiveListener() {
+		Main.log.info("[JSONAPI-Commands] Add generic command listener");
+		this.passiveListener = true;
 	}
 	public void removeListener(String command) {
 		Main.log.info("[JSONAPI-Commands] Remove command: " + command);
@@ -89,12 +96,19 @@ public class Main extends JavaPlugin {
 		Main.log.info("[JSONAPI-Commands] Remove all commands");
 		this.listeners.clear();
 	}
+	public void removePassiveListener() {
+		Main.log.info("[JSONAPI-Commands] Remove generic command listener");
+		this.passiveListener = false;
+	}
 	public Set<String> getListeners() {
 		return this.listeners;
 	}
+	public boolean getPassiveListener() {
+		return this.passiveListener;
+	}
 	
-	public void emit(String command, String[] args, Player player, PlayerCommandPreprocessEvent event) {
+	public void emit(String command, String[] args, Player player, PlayerCommandPreprocessEvent event, Boolean passive) {
 		Main.log.info("[JSONAPI-Commands] " + player.getName() + ": " + event.getMessage());
-		this.stream.addMessage(new StreamCommand(command, args, player));
+		this.stream.addMessage(new StreamCommand(command, args, player, passive));
 	}
 }
